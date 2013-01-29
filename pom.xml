@@ -28,15 +28,17 @@
 			<timezone>+1</timezone>
 		</developer>
 	</developers>
+	
+	<!--         Reporting            -->
 	<reporting>
 		<plugins>
-
-
+		<!-- PrettyPrint del codice  -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
 				<version>2.3</version>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
@@ -54,7 +56,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.1.2</version>
+				<version>2.6</version>
 				<reportSets>
 					<reportSet>
 						<reports>
@@ -104,13 +106,14 @@
 			</plugin>
 		</plugins>
 	</reporting>
-
+	
+	<!-- Build -->
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
-                                <version>2.2.1</version>
+				<version>2.2.1</version>
 				<executions>
 					<execution>
 						<id>attach-sources</id>
@@ -120,12 +123,10 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.0</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -159,7 +160,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-scr-plugin</artifactId>
-                                 <version>1.9.0</version>
+				<version>1.9.0</version>
 				<executions>
 					<execution>
 						<id>generate-scr-scrdescriptor</id>
@@ -169,15 +170,15 @@
 					</execution>
 				</executions>
 			</plugin>
-                        <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9</version>
-                                <executions>
+				<executions>
 					<execution>
 						<id>attach-javadocs</id>
 						<goals>
-						<goal>jar</goal>
+							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -194,41 +195,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.felix
-										</groupId>
-										<artifactId>
-											maven-scr-plugin
-										</artifactId>
-										<versionRange>
-											[1.8.0,)
-										</versionRange>
-										<goals>
-											<goal>scr</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
 	</build>
 </project>
