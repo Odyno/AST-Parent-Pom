@@ -1,1 +1,10 @@
+
 target/
+
+.settings/
+.classpath
+.project
+
+build/
+dist/
+nbproject/private/
