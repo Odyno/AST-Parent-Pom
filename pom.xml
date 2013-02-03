@@ -29,6 +29,27 @@
 		</developer>
 	</developers>
 
+	<distributionManagement>
+		<downloadUrl>http://www.staniscia.net/repository/release</downloadUrl>
+		<site>
+			<id>ftp-repository-site</id>
+			<name>staniscia.net Website</name>
+			<url>ftp://ftp.staniscia.net/htdocs/mvn-sites/</url>
+		</site>
+		<repository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>ftp-repository-stable</id>
+			<url>ftp://ftp.staniscia.net/htdocs/repository/release</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>ftp-repository-snapshot</id>
+			<name>Propellors Snapshots</name>
+			<url>ftp://ftp.staniscia.net/htdocs/repository/snapshot</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<!-- Reporting -->
 	<reporting>
 		<plugins>
@@ -240,6 +261,15 @@
 					<useStandardDocletOptions>false</useStandardDocletOptions>
 				</configuration>
 			</plugin>
+
 		</plugins>
+		<extensions>
+			<!-- Enabling the use of FTP -->
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
 	</build>
 </project>
