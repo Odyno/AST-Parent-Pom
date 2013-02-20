@@ -1,21 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<groupId>net.staniscia</groupId>
 	<artifactId>ast-parent-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>0.0.3-SNAPSHOT</version>
-
+	<version>0.1.0</version>
+	
 	<name>AST parent pom</name>
 	<description>the Alessandro STaniscia Maven parent pom  used for all software made by Alessandro Staniscia</description>
 	<url>http://www.staniscia.net</url>
-
+	
 	<organization>
 		<name>Alessandro Staniscia</name>
 		<url>http://www.staniscia.net</url>
 	</organization>
-
+	
 	<developers>
 		<developer>
 			<id>Odyno</id>
@@ -28,7 +28,7 @@
 			<timezone>+1</timezone>
 		</developer>
 	</developers>
-
+	
 	<distributionManagement>
 		<downloadUrl>http://www.staniscia.net/repository/release</downloadUrl>
 		<site>
@@ -49,12 +49,23 @@
 			<url>ftp://ftp.staniscia.net/htdocs/repository/snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
-
+	
+	<repositories>
+		<repository>
+			<id>staniscia.net-release</id>
+			<url>http://www.staniscia.net/repository/release</url>
+		</repository>
+		<repository>
+			<id>staniscia.net-snapshot</id>
+			<url>http://www.staniscia.net/repository/snapshot</url>
+		</repository>
+	</repositories>
+	
 	<!-- Reporting -->
 	<reporting>
 		<plugins>
 			<!-- reportistica -->
-
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
@@ -85,7 +96,7 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-
+			
 			<!-- Checkstyle -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -104,7 +115,7 @@
 					</reportSet>
 				</reportSets>
 			</plugin>
-
+			
 			<!-- Copertura dei test -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -117,24 +128,24 @@
 					</formats>
 				</configuration>
 			</plugin>
-
-
+			
+			
 			<!-- PrettyPrint del codice -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
 				<version>2.3</version>
 			</plugin>
-
+			
 			<!-- Surefire scrittua testResults -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
 				<version>2.13</version>
 			</plugin>
-
+			
 			<!-- PMD -->
-
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
@@ -145,7 +156,7 @@
 					<targetJdk>1.6</targetJdk>
 				</configuration>
 			</plugin>
-
+			
 			<!-- TagList -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -173,7 +184,7 @@
 			</plugin>
 		</plugins>
 	</reporting>
-
+	
 	<!-- Build -->
 	<build>
 		<plugins>
@@ -261,7 +272,7 @@
 					<useStandardDocletOptions>false</useStandardDocletOptions>
 				</configuration>
 			</plugin>
-
+			
 		</plugins>
 		<extensions>
 			<!-- Enabling the use of FTP -->
