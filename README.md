@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Odyno/AST-Parent-Pom.png?branch=master)](https://travis-ci.org/Odyno/AST-Parent-Pom)
 AST-Parent-Pom
 ==============
 
