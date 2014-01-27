@@ -22,8 +22,8 @@
 			<name>Alessandro Staniscia</name>
 			<email>alessandro@staniscia.net</email>
 			<roles>
-				<role>Architect</role>
-			</roles>
+                <role>Senior software develope</role>
+            </roles>
 			<organization>staniscia.net</organization>
 			<timezone>+1</timezone>
 		</developer>
@@ -69,25 +69,26 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.6</version>
-			</plugin>
+                <version>2.7</version>
+            </plugin>
 			<!-- javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-					<docletArtifact>
-						<groupId>org.umlgraph</groupId>
-						<artifactId>doclet</artifactId>
-						<version>5.1</version>
-					</docletArtifact>
-					<show>private</show>
-					<additionalparam>-all -constructors</additionalparam>
-					<useStandardDocletOptions>false</useStandardDocletOptions>
-				</configuration>
-				<reportSets>
+                <version>2.9.1</version>
+                <!-- <configuration>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>doclet</artifactId>
+                        <version></version>
+                    </docletArtifact>
+                    <show>private</show>
+                    <additionalparam>-all -constructors</additionalparam>
+                    <useStandardDocletOptions>false</useStandardDocletOptions>
+                </configuration>
+                -->
+                <reportSets>
 					<reportSet>
 						<id>default</id>
 						<reports>
@@ -101,8 +102,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<version>2.9.1</version>
-				<configuration>
+                <version>2.11</version>
+                <configuration>
 					<configLocation>config/maven_checks.xml</configLocation>
 					<headerLocation>config/maven-header.txt</headerLocation>
 				</configuration>
@@ -120,14 +121,15 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.5.2</version>
-				<configuration>
+                <version>2.6</version>
+                <configuration>
 					<formats>
 						<format>html</format>
 						<format>xml</format>
 					</formats>
-				</configuration>
-			</plugin>
+                    <check/>
+                </configuration>
+            </plugin>
 			
 			
 			<!-- PrettyPrint del codice -->
@@ -141,18 +143,18 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.13</version>
-			</plugin>
+                <version>2.16</version>
+            </plugin>
 			
 			<!-- PMD -->
 			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>2.7.1</version>
-				<configuration>
-					<linkXref>true</linkXref>
-					<minimumTokens>100</minimumTokens>
+                <version>3.0.1</version>
+                <configuration>
+                    <linkXRef>true</linkXRef>
+                    <minimumTokens>100</minimumTokens>
 					<targetJdk>1.6</targetJdk>
 				</configuration>
 			</plugin>
@@ -204,8 +206,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
-				<configuration>
+                <version>3.1</version>
+                <configuration>
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
@@ -213,8 +215,8 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
-				<version>2.5.2</version>
-				<configuration>
+                <version>2.6</version>
+                <configuration>
 					<instrumentation>
 						<excludes>
 							<exclude>net.staniscia/**/*Test.class</exclude>
@@ -232,14 +234,14 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
+                <version>2.4.0</version>
+                <extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-scr-plugin</artifactId>
-				<version>1.9.0</version>
-				<executions>
+                <version>1.15.0</version>
+                <executions>
 					<execution>
 						<id>generate-scr-scrdescriptor</id>
 						<goals>
@@ -260,18 +262,19 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-					<docletArtifact>
-						<groupId>org.umlgraph</groupId>
-						<artifactId>doclet</artifactId>
-						<version>5.1</version>
-					</docletArtifact>
-					<show>private</show>
-					<additionalparam>-all -constructors</additionalparam>
-					<useStandardDocletOptions>false</useStandardDocletOptions>
-				</configuration>
-			</plugin>
+                <!-- <configuration>
+                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+                    <docletArtifact>
+                        <groupId>org.umlgraph</groupId>
+                        <artifactId>doclet</artifactId>
+                        <version>5.1</version>
+                    </docletArtifact>
+                    <show>private</show>
+                    <additionalparam>-all -constructors</additionalparam>
+                    <useStandardDocletOptions>false</useStandardDocletOptions>
+                </configuration>
+                -->
+            </plugin>
 			
 		</plugins>
 		<extensions>
@@ -279,8 +282,8 @@
 			<extension>
 				<groupId>org.apache.maven.wagon</groupId>
 				<artifactId>wagon-ftp</artifactId>
-				<version>2.2</version>
-			</extension>
+                <version>2.5</version>
+            </extension>
 		</extensions>
 	</build>
 </project>

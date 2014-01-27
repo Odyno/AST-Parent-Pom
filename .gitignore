@@ -4,7 +4,8 @@ target/
 .settings/
 .classpath
 .project
-
+.idea/
 build/
 dist/
 nbproject/private/
+*.iml
