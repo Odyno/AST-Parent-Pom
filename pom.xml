@@ -5,7 +5,7 @@
 	<groupId>net.staniscia</groupId>
 	<artifactId>ast-parent-pom</artifactId>
 	<packaging>pom</packaging>
-	<version>0.1.2-SNAPSHOT</version>
+	<version>0.1.2</version>
 	
 	<name>AST parent pom</name>
 	<description>the Alessandro STaniscia Maven parent pom  used for all software made by Alessandro Staniscia</description>
