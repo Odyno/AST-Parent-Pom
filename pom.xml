@@ -22,7 +22,7 @@
 			<name>Alessandro Staniscia</name>
 			<email>alessandro@staniscia.net</email>
 			<roles>
-                <role>Senior software develope</role>
+                <role>Senior software developer</role>
             </roles>
 			<organization>staniscia.net</organization>
 			<timezone>+1</timezone>
@@ -31,11 +31,6 @@
 	
 	<distributionManagement>
 		<downloadUrl>http://www.staniscia.net/repository/release</downloadUrl>
-		<site>
-			<id>ftp-repository-site</id>
-			<name>staniscia.net Website</name>
-			<url>ftp://ftp.staniscia.net/htdocs/mvn-sites/</url>
-		</site>
 		<repository>
 			<uniqueVersion>false</uniqueVersion>
 			<id>ftp-repository-stable</id>
@@ -64,30 +59,19 @@
 	<!-- Reporting -->
 	<reporting>
 		<plugins>
+
 			<!-- reportistica -->
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
                 <version>2.7</version>
             </plugin>
+
 			<!-- javadoc -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
-                <!-- <configuration>
-                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-                    <docletArtifact>
-                        <groupId>org.umlgraph</groupId>
-                        <artifactId>doclet</artifactId>
-                        <version></version>
-                    </docletArtifact>
-                    <show>private</show>
-                    <additionalparam>-all -constructors</additionalparam>
-                    <useStandardDocletOptions>false</useStandardDocletOptions>
-                </configuration>
-                -->
                 <reportSets>
 					<reportSet>
 						<id>default</id>
@@ -238,19 +222,6 @@
                 <extensions>true</extensions>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-scr-plugin</artifactId>
-                <version>1.15.0</version>
-                <executions>
-					<execution>
-						<id>generate-scr-scrdescriptor</id>
-						<goals>
-							<goal>scr</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9</version>
@@ -262,18 +233,6 @@
 						</goals>
 					</execution>
 				</executions>
-                <!-- <configuration>
-                    <doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-                    <docletArtifact>
-                        <groupId>org.umlgraph</groupId>
-                        <artifactId>doclet</artifactId>
-                        <version>5.1</version>
-                    </docletArtifact>
-                    <show>private</show>
-                    <additionalparam>-all -constructors</additionalparam>
-                    <useStandardDocletOptions>false</useStandardDocletOptions>
-                </configuration>
-                -->
             </plugin>
 			
 		</plugins>
