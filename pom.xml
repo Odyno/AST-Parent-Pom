@@ -13,10 +13,21 @@
     </description>
     <url>http://www.staniscia.net</url>
 
+    <properties>
+        <github.prj.url>Odyno/AST-Parent-Pom</github.prj.url>
+    </properties>
+
+
     <organization>
         <name>Alessandro Staniscia</name>
         <url>http://www.staniscia.net</url>
     </organization>
+
+    <scm>
+        <url>https://github.com/${github.prj.url}</url>
+        <connection>scm:git:git://github.com/${github.prj.url}.git</connection>
+        <developerConnection>scm:git:git@github.com:${github.prj.url}.git</developerConnection>
+    </scm>
 
     <developers>
         <developer>
@@ -24,7 +35,7 @@
             <name>Alessandro Staniscia</name>
             <email>alessandro@staniscia.net</email>
             <roles>
-            <role>Senior software developer</role>
+                <role>Senior software developer</role>
             </roles>
             <organization>staniscia.net</organization>
             <timezone>+1</timezone>
