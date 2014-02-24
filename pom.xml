@@ -25,9 +25,9 @@
     </organization>
 
     <scm>
-        <url>https://github.com/${github.prj.url}</url>
-        <connection>scm:git:git://github.com/${github.prj.url}.git</connection>
-        <developerConnection>scm:git:git@github.com:${github.prj.url}.git</developerConnection>
+        <url>https://github.com/Odyno/AST-Parent-Pom.git</url>
+        <connection>scm:git:git://github.com/Odyno/AST-Parent-Pom.git</connection>
+        <developerConnection>scm:git:git@github.com:Odyno/AST-Parent-Pom.git</developerConnection>
     </scm>
 
     <developers>
